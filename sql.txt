@@ -1,0 +1,71 @@
+CREATE TABLE user_info
+(
+    id           INT PRIMARY KEY UNIQUE NOT NULL AUTO_INCREMENT COMMENT '用户编号，主键，自动增长',
+    user_account VARCHAR(20)            NOT NULL COMMENT '用户登陆时使用的帐号名称',
+    user_pwd     VARCHAR(32)            NOT NULL COMMENT '用户登陆时使用的密码',
+    role_id      INT                    NOT NULL COMMENT '用户的角色 ID,外键',
+    locked       INT                    NOT NULL DEFAULT 0 COMMENT '用户是否被锁定：0-为锁定，1-锁定',
+    faceimg      VARCHAR(50)            NOT NULL DEFAULT 'default.jpg' COMMENT '用户头像图片名'
+) COMMENT '用户信息';
+
+CREATE TABLE role_info
+(
+    id        INT         NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '角色编号，主键，自动增长',
+    role_name VARCHAR(32) NOT NULL COMMENT '角色名称'
+) COMMENT '角色信息';
+
+ALTER TABLE user_info
+    ADD FOREIGN KEY user_info (role_id) REFERENCES role_info (id);
+
+CREATE TABLE dishes_info
+(
+    id                 INT          NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '菜品编号，主键，自动增长',
+    dishes_name        VARCHAR(100) NOT NULL COMMENT '菜品名称',
+    dishes_description VARCHAR(100) NOT NULL COMMENT '菜品的简单介绍',
+    dishes_img         VARCHAR(100) NOT NULL DEFAULT 'default.jpg' COMMENT '菜品图片文件名称',
+    dishes_txt         VARCHAR(400) NOT NULL COMMENT '菜品的简单介绍',
+    recommend          INT          NOT NULL DEFAULT 0 COMMENT '是否推荐菜品：0-非推荐，1-推荐菜品',
+    dishes_price       FLOAT        NOT NULL COMMENT '菜品单价'
+) COMMENT '菜品信息';
+
+CREATE TABLE order_info
+(
+    id               INT      NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '订单编号，主键，自动增长',
+    order_begin_date DATETIME NOT NULL COMMENT '订单开始时间',
+    order_end_date   DATETIME NOT NULL COMMENT '订单结束时间',
+    waiter_id        INT      NOT NULL COMMENT '订单的点餐员ID,外键 user_info.id',
+    order_status     INT      NOT NULL DEFAULT 0 COMMENT '订单状态：0-正在用餐，1-准备结帐，2-已经结帐，3-免单订单',
+    table_id         INT      NOT NULL COMMENT '订单的桌号'
+) COMMENT '订单信息';
+
+ALTER TABLE order_info
+    ADD FOREIGN KEY order_info (waiter_id) REFERENCES user_info (id);
+
+CREATE TABLE order_dishes
+(
+    id        INT NOT NULL COMMENT '详单编号，主键，自动增长',
+    order_id  INT NOT NULL COMMENT '对应订单编号，外键 order_info.id',
+    dishes_id INT NOT NULL COMMENT '对应菜品编号，外键 dishes_info.id',
+    num       INT NOT NULL COMMENT '菜品的数量'
+) COMMENT '订单菜品';
+
+ALTER TABLE order_dishes
+    ADD FOREIGN KEY order_dishes (order_id) REFERENCES order_info (id);
+ALTER TABLE order_dishes
+    ADD FOREIGN KEY order_dishes (dishes_id) REFERENCES dishes_info (id);
+
+-- insert
+INSERT INTO role_info()
+values ();
+
+INSERT INTO user_info()
+values ();
+
+INSERT INTO order_info()
+values ();
+
+INSERT INTO order_dishes()
+values ();
+
+INSERT INTO dishes_info()
+values ();
