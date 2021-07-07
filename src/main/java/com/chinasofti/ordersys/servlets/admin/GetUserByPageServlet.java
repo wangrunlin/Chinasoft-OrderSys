@@ -77,6 +77,8 @@ public class GetUserByPageServlet extends HttpServlet {
 		page = page < 1 ? 1 : page;
 		// 对当前的页码数进行纠错，如果大于最大页码，则直接显示最后一页的内容
 		page = page > maxPage ? maxPage : page;
+		// 保留当前页面存根
+		request.getSession().setAttribute("CURRENT_PAGE", page);
 		// 进行分页数据查询
 		ArrayList<UserInfo> list = service.getByPage(page, 10);
 		// 尝试将结果结构化为xml文档

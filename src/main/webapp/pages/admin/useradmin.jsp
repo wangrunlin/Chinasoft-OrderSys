@@ -52,7 +52,6 @@
 	}
 
 	function getUserList(page) {
-
 		xmlAjaxRequest("getuserbypage.order?page=" + page + "&time="
 				+ Math.random(), "get", true, null, showList, null, null);
 	}
@@ -147,7 +146,7 @@
 </script>
 </head>
 
-<body style="font-family: 微软雅黑" onload="getUserList(1)">
+<body style="font-family: 微软雅黑" onload="getUserList(${sessionScope.CURRENT_PAGE == null ? 1 : sessionScope.CURRENT_PAGE})">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
