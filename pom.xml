@@ -10,7 +10,6 @@
   <packaging>war</packaging>
 
   <name>OrderSys Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>https://runlin.live/OrderSys</url>
 
   <properties>
@@ -36,6 +35,12 @@
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.16</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
     </dependency>
   </dependencies>
 </project>
