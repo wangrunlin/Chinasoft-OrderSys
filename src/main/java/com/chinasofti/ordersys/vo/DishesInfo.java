@@ -1,52 +1,109 @@
+/**
+ *  Copyright 2015 ChinaSoft International Ltd. All rights reserved.
+ */
 package com.chinasofti.ordersys.vo;
 
-import lombok.Data;
-
 /**
- * è®¢å•ä¿¡æ¯
- *
- * @author leo
- * @date 2021/06/25 15:27
- **/
-@Data
+ * <p>
+ * Title:DishesInfo
+ * </p>
+ * <p>
+ * Description: ²ËÆ·ĞÅÏ¢VO
+ * </p>
+ * <p>
+ * Copyright: Copyright (c) 2015
+ * </p>
+ * <p>
+ * Company: ChinaSoft International Ltd.
+ * </p>
+ * 
+ * @author etc
+ * @version 1.0
+ */
 public class DishesInfo {
+	/**
+	 * ²ËÆ·ID
+	 * */
+	private int dishesId;
+	/**
+	 * ²ËÆ·Ãû³Æ
+	 * */
+	private String dishesName;
+	/**
+	 * ²ËÆ·ÃèÊö
+	 * */
+	private String dishesDiscript;
+	/**
+	 * ²ËÆ·Í¼Æ¬
+	 * */
+	private String dishesImg;
+	/**
+	 * ²ËÆ·ÏêÏ¸ÃèÊöÎÄ±¾
+	 * */
+	private String dishesTxt;
+	/**
+	 * ÊÇ·ñÍÆ¼ö²ËÆ·±êÊ¶
+	 * */
+	private int recommend;
+	/**
+	 * ²ËÆ·µ¥¼Û
+	 * */
+	private float dishesPrice;
 
-    /**
-     * èœå“ç¼–å· #
-     * è‡ªåŠ¨å¢é•¿
-     */
-    private int id;
+	public int getDishesId() {
+		return dishesId;
+	}
 
-    /**
-     * èœå“åç§°
-     */
-    private String dishesName;
+	public void setDishesId(int dishesId) {
+		this.dishesId = dishesId;
+	}
 
-    /**
-     * èœå“çš„ç®€å•ä»‹ç»
-     */
-    private String dishesDescription;
+	public String getDishesName() {
+		return dishesName;
+	}
 
-    /**
-     * èœå“å›¾ç‰‡æ–‡ä»¶åç§°
-     */
-    private String dishesImg = "default.jpg";
+	public void setDishesName(String dishesName) {
+		this.dishesName = dishesName;
+	}
 
-    /**
-     * èœå“çš„ç®€å•ä»‹ç»
-     */
-    private String dishesTxt;
+	public String getDishesDiscript() {
+		return dishesDiscript;
+	}
 
-    /**
-     * æ˜¯å¦æ¨èèœå“
-     * 0-éæ¨è
-     * 1-æ¨èèœå“
-     */
-    private int recommend = 0;
+	public void setDishesDiscript(String dishesDiscript) {
+		this.dishesDiscript = dishesDiscript;
+	}
 
-    /**
-     * èœå“å•ä»·
-     */
-    private float dishesPrice;
+	public String getDishesImg() {
+		return dishesImg;
+	}
+
+	public void setDishesImg(String dishesImg) {
+		this.dishesImg = dishesImg;
+	}
+
+	public String getDishesTxt() {
+		return dishesTxt;
+	}
+
+	public void setDishesTxt(String dishesTxt) {
+		this.dishesTxt = dishesTxt;
+	}
+
+	public int getRecommend() {
+		return recommend;
+	}
+
+	public void setRecommend(int recommend) {
+		this.recommend = recommend;
+	}
+
+	public float getDishesPrice() {
+		return dishesPrice;
+	}
+
+	public void setDishesPrice(float dishesPrice) {
+		this.dishesPrice = dishesPrice;
+	}
 
 }

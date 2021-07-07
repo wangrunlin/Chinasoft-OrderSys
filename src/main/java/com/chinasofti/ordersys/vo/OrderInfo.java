@@ -1,52 +1,161 @@
+/**
+ *  Copyright 2015 ChinaSoft International Ltd. All rights reserved.
+ */
 package com.chinasofti.ordersys.vo;
 
-import lombok.Data;
-
-import java.util.Date;
+import java.sql.Date;
 
 /**
- * è®¢å•ä¿¡æ¯
- *
- * @author leo
- * @date 2021/06/28 10:04
- **/
-@Data
+ * <p>
+ * Title:OrderInfo
+ * </p>
+ * <p>
+ * Description: ¶©µ¥ĞÅÏ¢VO
+ * </p>
+ * <p>
+ * Copyright: Copyright (c) 2015
+ * </p>
+ * <p>
+ * Company: ChinaSoft International Ltd.
+ * </p>
+ * 
+ * @author etc
+ * @version 1.0
+ */
 public class OrderInfo {
+	/**
+	 * ¶©µ¥ID
+	 * */
+	private int orderId;
+	/**
+	 * ¿ªµ¥Ê±¼ä
+	 * */
+	private Date orderBeginDate;
+	/**
+	 * ½áµ¥Ê±¼ä
+	 * */
+	private Date orderEndDate;
+	/**
+	 * µãµ¥·şÎñÔ±ID
+	 * */
+	private int waiterId;
+	/**
+	 * ¶©µ¥×ÀºÅ
+	 * */
+	private int tableId;
+	/**
+	 * µãµ¥·şÎñÔ±ÕÊºÅ
+	 * */
+	private String userAccount;
+	/**
+	 * ²ËÆ·µ¥¼Û
+	 * */
+	private float dishesPrice;
+	/**
+	 * ²ËÆ·Ãû
+	 * */
+	private String dishesName;
 
-    /**
-     * è®¢å•ç¼–å· #
-     * è‡ªåŠ¨å¢é•¿
-     */
-    private int id;
+	public String getDishesName() {
+		return dishesName;
+	}
 
-    /**
-     * è®¢å•å¼€å§‹æ—¶é—´
-     */
-    private Date orderBeginDate;
+	public void setDishesName(String dishesName) {
+		this.dishesName = dishesName;
+	}
 
-    /**
-     * è®¢å•ç»“æŸæ—¶é—´
-     */
-    private Date orderEndDate;
+	public float getDishesPrice() {
+		return dishesPrice;
+	}
 
-    /**
-     * è®¢å•çš„ç‚¹é¤å‘˜ID $
-     * å¤–é”® user_info.id
-     */
-    private int waiterId;
+	public void setDishesPrice(float dishesPrice) {
+		this.dishesPrice = dishesPrice;
+	}
 
-    /**
-     * è®¢å•çŠ¶æ€
-     * 0-æ­£åœ¨ç”¨é¤
-     * 1-å‡†å¤‡ç»“å¸
-     * 2-å·²ç»ç»“å¸
-     * 3-å…å•è®¢å•
-     */
-    private int orderStatus;
+	public String getUserAccount() {
+		return userAccount;
+	}
 
-    /**
-     * è®¢å•çš„æ¡Œå·
-     */
-    private int tableId;
+	public void setUserAccount(String userAccount) {
+		this.userAccount = userAccount;
+	}
+
+	public int getTableId() {
+		return tableId;
+	}
+
+	public void setTableId(int tableId) {
+		this.tableId = tableId;
+	}
+
+	/**
+	 * ¶©µ¥×´Ì¬
+	 * */
+	private int orderState;
+	/**
+	 * ²ËÆ·ID
+	 * */
+	private int dishes;
+	/**
+	 * ²ËÆ·ÊıÁ¿
+	 * */
+	private int num;
+
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+
+	public Date getOrderBeginDate() {
+
+		return orderBeginDate;
+	}
+
+	public void setOrderBeginDate(Date orderBeginDate) {
+		this.orderBeginDate = orderBeginDate;
+	}
+
+	public Date getOrderEndDate() {
+		return orderEndDate;
+	}
+
+	public void setOrderEndDate(Date orderEndDate) {
+		this.orderEndDate = orderEndDate;
+	}
+
+	public int getWaiterId() {
+		return waiterId;
+	}
+
+	public void setWaiterId(int waiterId) {
+		this.waiterId = waiterId;
+	}
+
+	public int getOrderState() {
+		return orderState;
+	}
+
+	public void setOrderState(int orderState) {
+		this.orderState = orderState;
+	}
+
+	public int getDishes() {
+		return dishes;
+	}
+
+	public void setDishes(int dishes) {
+		this.dishes = dishes;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public void setNum(int num) {
+		this.num = num;
+	}
 
 }

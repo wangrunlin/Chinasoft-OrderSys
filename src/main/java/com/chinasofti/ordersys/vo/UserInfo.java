@@ -1,48 +1,110 @@
+/**
+ *  Copyright 2015 ChinaSoft International Ltd. All rights reserved.
+ */
 package com.chinasofti.ordersys.vo;
 
-import lombok.Data;
-
 /**
- * ç”¨æˆ·ä¿¡æ¯
- *
- * @author leo
- * @date 2021/06/28 10:35
- **/
-@Data
+ * <p>
+ * Title:UserInfo
+ * </p>
+ * <p>
+ * Description: ÓÃ»§ĞÅÏ¢VO
+ * </p>
+ * <p>
+ * Copyright: Copyright (c) 2015
+ * </p>
+ * <p>
+ * Company: ChinaSoft International Ltd.
+ * </p>
+ * 
+ * @author etc
+ * @version 1.0
+ */
 public class UserInfo {
+	/**
+	 * ÓÃ»§ID
+	 * */
+	private int userId;
+	/**
+	 * ÓÃ»§ÕË»§
+	 * */
+	private String userAccount;
+	/**
+	 * ÓÃ»§ÃÜÂë
+	 * */
+	private String userPass;
+	/**
+	 * ÓÃ»§½ÇÉ«ID
+	 * */
+	private int roleId;
+	/**
+	 * ÓÃ»§½ÇÉ«Ãû
+	 * */
+	private String roleName;
+	/**
+	 * ÓÃ»§ÊÇ·ñ±»Ëø¶¨µÄ±êÊ¶
+	 * */
+	private int locked;
+	/**
+	 * ÓÃ»§Í·ÏñÂ·¾¶
+	 * */
+	private String faceimg = "default.jpg";
 
-    /**
-     * ç”¨æˆ·ç¼–å· #
-     * è‡ªåŠ¨å¢é•¿
-     */
-    private int id;
+	public String getFaceimg() {
+		return faceimg;
+	}
 
-    /**
-     * ç”¨æˆ·ç™»é™†æ—¶ä½¿ç”¨çš„å¸å·åç§°
-     */
-    private String username;
+	public void setFaceimg(String faceimg) {
+		this.faceimg = faceimg;
+	}
 
-    /**
-     * ç”¨æˆ·ç™»é™†æ—¶ä½¿ç”¨çš„å¯†ç 
-     */
-    private String pwd;
+	public int getLocked() {
+		return locked;
+	}
 
-    /**
-     * ç”¨æˆ·çš„è§’è‰² ID $
-     * role_info.id
-     */
-    private int role_id;
+	public void setLocked(int locked) {
 
-    /**
-     * ç”¨æˆ·æ˜¯å¦è¢«é”å®š
-     * 0-æœªé”å®š
-     * 1-é”å®š
-     */
-    private int locked;
+		this.locked = locked;
+	}
 
-    /**
-     * ç”¨æˆ·å¤´åƒå›¾ç‰‡å
-     */
-    private String faceimg = "default.jpg";
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getUserAccount() {
+		return userAccount;
+	}
+
+	public void setUserAccount(String userAccount) {
+		this.userAccount = userAccount;
+	}
+
+	public String getUserPass() {
+		return userPass;
+	}
+
+	public void setUserPass(String userPass) {
+		this.userPass = userPass;
+	}
+
+	public int getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(int roleId) {
+		this.roleId = roleId;
+	}
+
+	public String getRoleName() {
+		return roleName;
+	}
+
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
+	}
 
 }
