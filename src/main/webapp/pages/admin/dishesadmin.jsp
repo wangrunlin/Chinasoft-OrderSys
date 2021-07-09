@@ -187,7 +187,7 @@
 </script>
 </head>
 
-<body style="font-family: 微软雅黑" onload="getDishesList(1)">
+<body style="font-family: 微软雅黑" onload="getDishesList(${sessionScope.CURRENT_PAGE == null ? 1 : sessionScope.CURRENT_PAGE})">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">

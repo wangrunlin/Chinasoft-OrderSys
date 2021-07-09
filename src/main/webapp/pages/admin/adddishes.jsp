@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@taglib prefix="icss" uri="http://www.chinasofti.com/etc/webtag"%>
+<%--<%@taglib prefix="icss" uri="http://www.chinasofti.com/etc/webtag"%>--%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"

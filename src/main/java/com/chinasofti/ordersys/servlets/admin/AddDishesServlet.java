@@ -60,7 +60,7 @@ public class AddDishesServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 判定是否存在表单提交令牌
-		if (TokenTag.isTokenValid()) {
+//		if (TokenTag.isTokenValid()) {
 			// 创建表单请求解析器工具
 			MultipartRequestParser parser = new MultipartRequestParser();
 			// 解析获取DishesInfo菜品信息对象
@@ -71,8 +71,8 @@ public class AddDishesServlet extends HttpServlet {
 			// 执行添加菜品操作
 			service.addDishes(info);
 			// 释放表单提交令牌
-			TokenTag.releaseToken();
-		}
+//			TokenTag.releaseToken();
+//		}
 		// 跳转到菜品管理界面
 		response.sendRedirect("/OrderSys/todishesadmin.order");
 	}
