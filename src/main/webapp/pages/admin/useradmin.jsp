@@ -34,6 +34,7 @@
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/ajax.js"></script>
 <script type="text/javascript">
+    let curPageNum = 1;
 	function deleteUser(id, name, obj) {
 
 		if (confirm("您真的要删除员工【" + name + "】吗？")) {
@@ -52,6 +53,7 @@
 	}
 
 	function getUserList(page) {
+		curPageNum = page;
 		xmlAjaxRequest("getuserbypage.order?page=" + page + "&time="
 				+ Math.random(), "get", true, null, showList, null, null);
 	}
@@ -60,6 +62,31 @@
 
 		var maxPage = responseXml.getElementsByTagName("maxPage");
 		maxPage = maxPage[0].childNodes;
+		let maxPageNum = parseInt(maxPage[0].nodeValue);
+		document.getElementById('firstpage').style = curPageNum <= 1 ? "display: none" : "";
+		document.getElementById('last').style = curPageNum >= maxPageNum ? "display: none" : "";
+
+		// 删除节点
+		for (let i = 1; i <= maxPageNum; i++) {
+			let el = document.getElementById('page' + i);
+			if (el != null)
+				el.remove();
+		}
+
+		let pager = document.getElementsByClassName('pager')[0];
+		for (let i = 1; i <= maxPageNum; i++) {
+			let node = document.createElement("li");
+			let aNode = document.createElement("a");
+			node.id = "page" + i;
+			aNode.href = "javascript:getUserList(" + i + ")";
+			aNode.innerText = i;
+			if (curPageNum === i) {
+			    aNode.style.backgroundColor = '#c0d6cb';
+			}
+			node.appendChild(aNode);
+			pager.insertBefore(node, document.getElementById('next').parentNode);
+		}
+
 		//alert(maxPage[0].nodeValue);
 		var link = document.getElementById("last");
 		link.href = "javascript:getUserList(" + maxPage[0].nodeValue + ")";

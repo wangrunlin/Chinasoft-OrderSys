@@ -60,7 +60,7 @@ public class ModifyDishesServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 判定是否存在表单提交令牌
-		if (TokenTag.isTokenValid()) {
+//		if (TokenTag.isTokenValid()) {
 			// 创建菜品管理服务对象
 			DishesService service = new DishesService();
 			// 创建表单请求解析器工具
@@ -71,8 +71,8 @@ public class ModifyDishesServlet extends HttpServlet {
 			// 执行菜品信息修改工作
 			service.modifyDishes(info);
 			// 释放表单提交令牌
-			TokenTag.releaseToken();
-		}
+//			TokenTag.releaseToken();
+//		}
 		// 跳转到菜品管理界面
 		response.sendRedirect("/OrderSys/todishesadmin.order");
 	}
