@@ -1,6 +1,6 @@
-<h1 align="center">Welcome to OrderSys 👋</h1>
+<h1 align="center">Welcome to Chinasoft-OrderSys 👋</h1>
 <p>
-  <a href="https://wangrunlin.github.io/OrderSys" target="_blank">
+  <a href="https://wangrunlin.github.io/Chinasoft-OrderSys" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="LICENSE" target="_blank">
@@ -15,19 +15,19 @@
 
 > Order System.
 
-### 🏠 [Homepage](https://wangrunlin.github.io/OrderSys)
+### 🏠 [Homepage](https://wangrunlin.github.io/Chinasoft-OrderSys)
 
-### ✨ [Demo](https://wangrunlin.github.io/OrderSys)
+### ✨ [Demo](https://wangrunlin.github.io/Chinasoft-OrderSys)
 
 ## Install
 
 ```sh
-git clone https://github.com/wangrunlin/OrderSys.git
+git clone https://github.com/wangrunlin/Chinasoft-OrderSys.git
 ```
 
 ## Usage
 
-[source code](https://github.com/wangrunlin/OrderSys)  
+[source code](https://github.com/wangrunlin/Chinasoft-OrderSys)  
 this is source code, you can build and run
 
 ## Author
@@ -40,7 +40,7 @@ this is source code, you can build and run
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/wangrunlin/OrderSys/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/wangrunlin/Chinasoft-OrderSys/issues). 
 
 ## Show your support
 
@@ -50,6 +50,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [leo](https://github.com/wangrunlin).<br />
 This project is [Apache-2.0](LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
