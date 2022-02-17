@@ -1,4 +1,4 @@
-<h1 align="center">欢迎来到 Chinasoft-OrderSys 👋</h1>
+wangrunlin_<h1 align="center">欢迎来到 Chinasoft-OrderSys 👋</h1>
 <p>
   <a href="https://wangrunlin.github.io/Chinasoft-OrderSys" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
@@ -6,8 +6,8 @@
   <a href="LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://twitter.com/Leo36363824" target="_blank">
-    <img alt="Twitter: Leo36363824" src="https://img.shields.io/twitter/follow/Leo36363824.svg?style=social" />
+  <a href="https://twitter.com/wangrunlin_" target="_blank">
+    <img alt="Twitter: wangrunlin_" src="https://img.shields.io/twitter/follow/wangrunlin_.svg?style=social" />
   </a>
 </p>
 
@@ -35,7 +35,7 @@ git clone https://github.com/wangrunlin/Chinasoft-OrderSys.git
 👤 **leo**
 
 * 网站: https://wangrunlin.com
-* 推特: [@Leo36363824](https://twitter.com/Leo36363824)
+* 推特: [@wangrunlin_](https://twitter.com/wangrunlin_)
 * Github: [@wangrunlin](https://github.com/wangrunlin)
 
 ## 🤝 贡献

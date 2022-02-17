@@ -6,8 +6,8 @@
   <a href="LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://twitter.com/Leo36363824" target="_blank">
-    <img alt="Twitter: Leo36363824" src="https://img.shields.io/twitter/follow/Leo36363824.svg?style=social" />
+  <a href="https://twitter.com/wangrunlin_" target="_blank">
+    <img alt="Twitter: wangrunlin_" src="https://img.shields.io/twitter/follow/wangrunlin_.svg?style=social" />
   </a>
 </p>
 
@@ -35,7 +35,7 @@ this is source code, you can build and run
 👤 **leo**
 
 * Website: https://wangrunlin.com
-* Twitter: [@Leo36363824](https://twitter.com/Leo36363824)
+* Twitter: [@wangrunlin_](https://twitter.com/wangrunlin_)
 * Github: [@wangrunlin](https://github.com/wangrunlin)
 
 ## 🤝 Contributing
